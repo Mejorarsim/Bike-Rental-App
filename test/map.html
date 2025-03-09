@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Dundee Map</title>
+    <style>
+      body, html, #map {
+        height: 100%;
+        margin: 0;
+        padding: 0;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="map"></div>
+
+    <script>
+      const dundeeLat = 56.4620;
+      const dundeeLng = -2.9707;
+      const zoomLevel = 16;
+
+      // Create a URL for the static map image from OpenStreetMap
+      const mapUrl = `https://www.openstreetmap.org/export/embed.html?bbox=${dundeeLng - 0.02}%2C${dundeeLat - 0.02}%2C${dundeeLng + 0.02}%2C${dundeeLat + 0.02}&layer=mapnik&zoom=${zoomLevel}`;
+
+      // Create an iframe element to embed the map
+      const mapIframe = document.createElement('iframe');
+      mapIframe.src = mapUrl;
+      mapIframe.style.border = 'none';
+      mapIframe.width = '100%';
+      mapIframe.height = '100%';
+
+      // Add the iframe to the 'map' div
+      const mapDiv = document.getElementById('map');
+      mapDiv.appendChild(mapIframe);
+    </script>
+  </body>
+</html>
