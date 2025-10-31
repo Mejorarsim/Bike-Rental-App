@@ -5,7 +5,6 @@
 
 <div align="center">
   <video src="https://github.com/user-attachments/assets/your-video-file.mp4" controls width="80%">
-    Your browser does not support the video tag.
   </video>
 </div>
 
